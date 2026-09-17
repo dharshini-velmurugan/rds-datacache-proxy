@@ -195,8 +195,8 @@ class GamblingController @Inject() (authorise: AuthAction, service: GamblingServ
   }
 
   def getControllingBodyDetails(
-                                 mgdRegNumber: String
-                               ): Action[AnyContent] = authorise.async { implicit request =>
+    mgdRegNumber: String
+  ): Action[AnyContent] = authorise.async { implicit request =>
 
     service.getControllingBodyDetails(mgdRegNumber).map {
 
